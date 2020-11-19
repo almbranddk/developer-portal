@@ -1,0 +1,427 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Guided Sales",
+		"_postman_id": "62afc3e8-d3ff-3d6b-18a6-7c228a652301",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "VWSF",
+			"description": "",
+			"item": [
+				{
+					"name": "Get access token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"access_token\", jsonData.access_token);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{auth_url}}/oauth/token",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"client_id\": \"{{client_id}}\",\r\n    \"client_secret\": \"{{client_secret}}\",\r\n    \"audience\": \"https://api.almbrand.dk/\",\r\n    \"grant_type\": \"client_credentials\"\r\n}\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{api_url}}/products",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{Ocp-Apim-Subscription-Key}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Trace",
+								"value": "true",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"client_id\":\"GsjDwo9syWCAlLOyFPBQYWV3oeE3gOxW\",\"client_secret\":\"2gTcRtLYenavDXO6Xl7T-A4G1V0LUDc_YOpizZOot2jQ5WiBNmWKq3J-ubrS0Yxc\",\"audience\":\"https://api.almbrand.dk/\",\"grant_type\":\"client_credentials\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get 'leasing' product info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{api_url}}/products/insurance-car-leasing",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{Ocp-Apim-Subscription-Key}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Trace",
+								"value": "true",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"client_id\":\"GsjDwo9syWCAlLOyFPBQYWV3oeE3gOxW\",\"client_secret\":\"2gTcRtLYenavDXO6Xl7T-A4G1V0LUDc_YOpizZOot2jQ5WiBNmWKq3J-ubrS0Yxc\",\"audience\":\"https://api.almbrand.dk/\",\"grant_type\":\"client_credentials\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get 'finance' product info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{api_url}}/products/insurance-car-finance",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{Ocp-Apim-Subscription-Key}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Trace",
+								"value": "true",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"client_id\":\"GsjDwo9syWCAlLOyFPBQYWV3oeE3gOxW\",\"client_secret\":\"2gTcRtLYenavDXO6Xl7T-A4G1V0LUDc_YOpizZOot2jQ5WiBNmWKq3J-ubrS0Yxc\",\"audience\":\"https://api.almbrand.dk/\",\"grant_type\":\"client_credentials\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get 'standalone' product info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{api_url}}/products/insurance-car-standalone",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{Ocp-Apim-Subscription-Key}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Trace",
+								"value": "true",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"client_id\":\"GsjDwo9syWCAlLOyFPBQYWV3oeE3gOxW\",\"client_secret\":\"2gTcRtLYenavDXO6Xl7T-A4G1V0LUDc_YOpizZOot2jQ5WiBNmWKq3J-ubrS0Yxc\",\"audience\":\"https://api.almbrand.dk/\",\"grant_type\":\"client_credentials\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get price offer for 'leasing' product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{api_url}}/insurance/car/offers",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{Ocp-Apim-Subscription-Key}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Trace",
+								"value": "true",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n  \"product\": {\r\n    \"product_name\" : \"insurance-car-leasing\",\r\n\r\n    \"parameters\" : {\r\n      \"brand_id\" : \"vw\",\r\n      \"youngest_driver_age\" : 45,\r\n      \"vehicle_price\" : 434000,\r\n      \"vehicle_type\" : \"personbil\",\r\n      \"vehicle_usage\" : \"privat_person_koersel\",\r\n      \"vehicle_user\" : \"person\",\r\n      \"vehicle_owner\" : \"partner\",\r\n      \"policy_holder\" : \"person\",\r\n      \"payments_per_year\" : 1,\r\n      \"deductible_id\" : \"70\",\r\n      \"currency\" : \"DKK\"\r\n    },\r\n\r\n    \"features\" : [\r\n       {  \"name\" : \"premium\" }\r\n    ]\r\n\r\n  }\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create price quote for 'leasing' product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+									"\r",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{api_url}}/insurance/car/quotes",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{Ocp-Apim-Subscription-Key}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Trace",
+								"value": "true",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"product\":{\"product_name\":\"insurance-car-standalone\",\"parameters\":{\"brand_id\":\"vw\",\"youngest_driver_age\":45,\"vehicle_price\":434000,\"vehicle_type\":\"personbil\",\"vehicle_usage\":\"privat_person_koersel\",\"vehicle_user\":\"person\",\"vehicle_owner\":\"person\",\"policy_holder\":\"person\",\"payments_per_year\":1,\"deductible_id\":\"70\",\"currency\":\"DKK\"},\"features\":[{\"name\":\"premium\"}]},\"policy\":{\"external_reference\":\"202 00 97 62 01\",\"expected_effective_at\":\"2020-12-31\",\"insurable_object\":{\"vehicle\":{\"make\":\"VW\",\"model\":\"Polo\",\"variant\":\"1,0 TSI Highline DSG 115HK 5d 7g Aut. \\u2013 2018\",\"vin\":\"1MMBB41JXYN109186\"}},\"parties\":[{\"policy_holder\":true,\"vehicle_user\":true,\"person\":{\"cpr_number\":\"0101701234\",\"first_name\":\"Rene\",\"last_name\":\"Hansen\"},\"phone\":\"96101717\",\"email\":\"person1@example.com\",\"address\":{\"protected\":false,\"street\":\"Midtermolen\",\"house_number\":\"7A\",\"floor\":\"2\",\"door\":\"2.1\",\"postal_code\":\"2100\",\"city\":\"København Ø\"}}]},\"agent\":{\"user_id\":\"jsl@vw.dk\",\"organization\":{\"name\":\"SEMLER RETAIL HOLBÆK A/S\",\"cvr_number\":\"21742031\",\"cvrp_number\":\"1005168532\"}}}\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get previous created price quote",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{api_url}}/insurance/car/quotes/{{quote_id}}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{Ocp-Apim-Subscription-Key}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Trace",
+								"value": "true",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"product\":{\"product_name\":\"insurance-car-standalone\",\"parameters\":{\"brand_id\":\"vw\",\"youngest_driver_age\":45,\"vehicle_price\":434000,\"vehicle_type\":\"personbil\",\"vehicle_usage\":\"privat_person_koersel\",\"vehicle_user\":\"person\",\"vehicle_owner\":\"person\",\"policy_holder\":\"person\",\"payments_per_year\":1,\"deductible_id\":\"70\",\"currency\":\"DKK\"},\"features\":[{\"name\":\"premium\"}]},\"policy\":{\"external_reference\":\"202 00 97 62 01\",\"expected_effective_at\":\"2020-12-31\",\"insurable_object\":{\"vehicle\":{\"make\":\"VW\",\"model\":\"Polo\",\"variant\":\"1,0 TSI Highline DSG 115HK 5d 7g Aut. \\u2013 2018\",\"vin\":\"1MMBB41JXYN109186\"}},\"parties\":[{\"policy_holder\":true,\"vehicle_user\":true,\"person\":{\"cpr_number\":\"0101701234\",\"first_name\":\"Rene\",\"last_name\":\"Hansen\"},\"phone\":\"96101717\",\"email\":\"person1@example.com\",\"address\":{\"protected\":false,\"street\":\"Midtermolen\",\"house_number\":\"7A\",\"floor\":\"2\",\"door\":\"2.1\",\"postal_code\":\"2100\",\"city\":\"København Ø\"}}]},\"agent\":{\"user_id\":\"jsl@vw.dk\",\"organization\":{\"name\":\"SEMLER RETAIL HOLBÆK A/S\",\"cvr_number\":\"21742031\",\"cvrp_number\":\"1005168532\"}}}\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Activate Quote",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{api_url}}/insurance/car/quotes/{{quote_id}}/activation",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{Ocp-Apim-Subscription-Key}}",
+								"description": ""
+							},
+							{
+								"key": "Ocp-Apim-Trace",
+								"value": "true",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
