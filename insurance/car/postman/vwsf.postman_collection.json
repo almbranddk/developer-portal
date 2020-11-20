@@ -390,7 +390,7 @@
 					],
 					"request": {
 						"url": "{{api_url}}/insurance/car/quotes/{{quote_id}}/activation",
-						"method": "POST",
+						"method": "PUT",
 						"header": [
 							{
 								"key": "Content-Type",
