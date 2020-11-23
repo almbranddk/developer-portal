@@ -252,7 +252,7 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
+								"value": "application/json; charset=UTF-8",
 								"description": ""
 							},
 							{
@@ -269,11 +269,31 @@
 								"key": "Ocp-Apim-Trace",
 								"value": "true",
 								"description": ""
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip,deflate",
+								"description": ""
+							},
+							{
+								"key": "Connection",
+								"value": "Keep-Alive",
+								"description": ""
+							},
+							{
+								"key": "Content-Length",
+								"value": "374",
+								"description": ""
+							},
+							{
+								"key": "User-Agent",
+								"value": "Apache-HttpClient/4.5.12 (Java/11.0.3)",
+								"description": ""
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{ \r\n  \"product\": {\r\n    \"product_name\" : \"insurance-car-leasing\",\r\n\r\n    \"parameters\" : {\r\n      \"brand_id\" : \"vw\",\r\n      \"youngest_driver_age\" : 45,\r\n      \"vehicle_price\" : 434000,\r\n      \"vehicle_type\" : \"personbil\",\r\n      \"vehicle_usage\" : \"privat_person_koersel\",\r\n      \"vehicle_user\" : \"person\",\r\n      \"vehicle_owner\" : \"partner\",\r\n      \"policy_holder\" : \"person\",\r\n      \"payments_per_year\" : 1,\r\n      \"deductible_id\" : \"70\",\r\n      \"currency\" : \"DKK\"\r\n    },\r\n\r\n    \"features\" : [\r\n       {  \"name\" : \"premium\" }\r\n    ]\r\n\r\n  }\r\n}"
+							"raw": "{ \r\n  \"product\": {\r\n    \"product_name\" : \"insurance-car-leasing\",\r\n\r\n    \"parameters\" : {\r\n      \"brand_id\" : \"vw\",\r\n      \"youngest_user_birthdate\" : \"1970-12-31\",\r\n      \"vehicle_price\" : 434000,\r\n      \"vehicle_type\" : \"personbil\",\r\n      \"vehicle_usage\" : \"privat_person_koersel\",\r\n      \"vehicle_user\" : \"person\",\r\n      \"vehicle_owner\" : \"partner\",\r\n      \"policy_holder\" : \"person\",\r\n      \"payments_per_year\" : 1,\r\n      \"deductible_id\" : \"70\",\r\n      \"currency\" : \"DKK\"\r\n    },\r\n\r\n    \"features\" : [\r\n       {  \"name\" : \"premium\" }\r\n    ]\r\n\r\n  }\r\n}"
 						},
 						"description": ""
 					},
@@ -321,7 +341,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"product\":{\"product_name\":\"insurance-car-standalone\",\"parameters\":{\"brand_id\":\"vw\",\"youngest_driver_age\":45,\"vehicle_price\":434000,\"vehicle_type\":\"personbil\",\"vehicle_usage\":\"privat_person_koersel\",\"vehicle_user\":\"person\",\"vehicle_owner\":\"person\",\"policy_holder\":\"person\",\"payments_per_year\":1,\"deductible_id\":\"70\",\"currency\":\"DKK\"},\"features\":[{\"name\":\"premium\"}]},\"policy\":{\"external_reference\":\"202 00 97 62 01\",\"expected_effective_at\":\"2020-12-31\",\"insurable_object\":{\"vehicle\":{\"make\":\"VW\",\"model\":\"Polo\",\"variant\":\"1,0 TSI Highline DSG 115HK 5d 7g Aut. \\u2013 2018\",\"vin\":\"1MMBB41JXYN109186\"}},\"parties\":[{\"policy_holder\":true,\"vehicle_user\":true,\"person\":{\"cpr_number\":\"0101701234\",\"first_name\":\"Rene\",\"last_name\":\"Hansen\"},\"phone\":\"96101717\",\"email\":\"person1@example.com\",\"address\":{\"protected\":false,\"street\":\"Midtermolen\",\"house_number\":\"7A\",\"floor\":\"2\",\"door\":\"2.1\",\"postal_code\":\"2100\",\"city\":\"København Ø\"}}]},\"agent\":{\"user_id\":\"jsl@vw.dk\",\"organization\":{\"name\":\"SEMLER RETAIL HOLBÆK A/S\",\"cvr_number\":\"21742031\",\"cvrp_number\":\"1005168532\"}}}\r\n"
+							"raw": "{\"product\":{\"product_name\":\"insurance-car-standalone\",\"parameters\":{\"brand_id\":\"vw\",      \"youngest_user_birthdate\" : \"1970-12-31\",\"vehicle_price\":434000,\"vehicle_type\":\"personbil\",\"vehicle_usage\":\"privat_person_koersel\",\"vehicle_user\":\"person\",\"vehicle_owner\":\"person\",\"policy_holder\":\"person\",\"payments_per_year\":1,\"deductible_id\":\"70\",\"currency\":\"DKK\"},\"features\":[{\"name\":\"premium\"}]},\"policy\":{\"external_reference\":\"202 00 97 62 01\",\"expected_effective_at\":\"2020-12-31\",\"insurable_object\":{\"vehicle\":{\"make\":\"VW\",\"model\":\"Polo\",\"variant\":\"1,0 TSI Highline DSG 115HK 5d 7g Aut. \\u2013 2018\",\"vin\":\"1MMBB41JXYN109186\"}},\"parties\":[{\"policy_holder\":true,\"vehicle_user\":true,\"person\":{\"cpr_number\":\"0101701234\",\"first_name\":\"Rene\",\"last_name\":\"Hansen\"},\"phone\":\"96101717\",\"email\":\"person1@example.com\",\"address\":{\"protected\":false,\"street\":\"Midtermolen\",\"house_number\":\"7A\",\"floor\":\"2\",\"door\":\"2.1\",\"postal_code\":\"2100\",\"city\":\"København Ø\"}}]},\"agent\":{\"user_id\":\"jsl@vw.dk\",\"organization\":{\"name\":\"SEMLER RETAIL HOLBÆK A/S\",\"cvr_number\":\"21742031\",\"cvrp_number\":\"1005168532\"}}}\r\n"
 						},
 						"description": ""
 					},
