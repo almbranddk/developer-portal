@@ -269,26 +269,6 @@
 								"key": "Ocp-Apim-Trace",
 								"value": "true",
 								"description": ""
-							},
-							{
-								"key": "Accept-Encoding",
-								"value": "gzip,deflate",
-								"description": ""
-							},
-							{
-								"key": "Connection",
-								"value": "Keep-Alive",
-								"description": ""
-							},
-							{
-								"key": "Content-Length",
-								"value": "374",
-								"description": ""
-							},
-							{
-								"key": "User-Agent",
-								"value": "Apache-HttpClient/4.5.12 (Java/11.0.3)",
-								"description": ""
 							}
 						],
 						"body": {
