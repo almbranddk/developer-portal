@@ -12,6 +12,201 @@
 			"description": "",
 			"item": [
 				{
+					"name": "product info",
+					"description": "",
+					"item": [
+						{
+							"name": "Get products",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/products",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"client_id\":\"GsjDwo9syWCAlLOyFPBQYWV3oeE3gOxW\",\"client_secret\":\"2gTcRtLYenavDXO6Xl7T-A4G1V0LUDc_YOpizZOot2jQ5WiBNmWKq3J-ubrS0Yxc\",\"audience\":\"https://api.almbrand.dk/\",\"grant_type\":\"client_credentials\"}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get 'leasing' product info",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/products/insurance-car-leasing",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"client_id\":\"GsjDwo9syWCAlLOyFPBQYWV3oeE3gOxW\",\"client_secret\":\"2gTcRtLYenavDXO6Xl7T-A4G1V0LUDc_YOpizZOot2jQ5WiBNmWKq3J-ubrS0Yxc\",\"audience\":\"https://api.almbrand.dk/\",\"grant_type\":\"client_credentials\"}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get 'finance' product info",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/products/insurance-car-finance",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"client_id\":\"GsjDwo9syWCAlLOyFPBQYWV3oeE3gOxW\",\"client_secret\":\"2gTcRtLYenavDXO6Xl7T-A4G1V0LUDc_YOpizZOot2jQ5WiBNmWKq3J-ubrS0Yxc\",\"audience\":\"https://api.almbrand.dk/\",\"grant_type\":\"client_credentials\"}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get 'standalone' product info",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/products/insurance-car-standalone",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"client_id\":\"GsjDwo9syWCAlLOyFPBQYWV3oeE3gOxW\",\"client_secret\":\"2gTcRtLYenavDXO6Xl7T-A4G1V0LUDc_YOpizZOot2jQ5WiBNmWKq3J-ubrS0Yxc\",\"audience\":\"https://api.almbrand.dk/\",\"grant_type\":\"client_credentials\"}"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
 					"name": "Get access token",
 					"event": [
 						{
@@ -45,194 +240,6 @@
 					"response": []
 				},
 				{
-					"name": "Get products",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
-									""
-								]
-							}
-						}
-					],
-					"request": {
-						"url": "{{api_url}}/products",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{access_token}}",
-								"description": ""
-							},
-							{
-								"key": "Ocp-Apim-Subscription-Key",
-								"value": "{{Ocp-Apim-Subscription-Key}}",
-								"description": ""
-							},
-							{
-								"key": "Ocp-Apim-Trace",
-								"value": "true",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"client_id\":\"GsjDwo9syWCAlLOyFPBQYWV3oeE3gOxW\",\"client_secret\":\"2gTcRtLYenavDXO6Xl7T-A4G1V0LUDc_YOpizZOot2jQ5WiBNmWKq3J-ubrS0Yxc\",\"audience\":\"https://api.almbrand.dk/\",\"grant_type\":\"client_credentials\"}"
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "Get 'leasing' product info",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
-									""
-								]
-							}
-						}
-					],
-					"request": {
-						"url": "{{api_url}}/products/insurance-car-leasing",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{access_token}}",
-								"description": ""
-							},
-							{
-								"key": "Ocp-Apim-Subscription-Key",
-								"value": "{{Ocp-Apim-Subscription-Key}}",
-								"description": ""
-							},
-							{
-								"key": "Ocp-Apim-Trace",
-								"value": "true",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"client_id\":\"GsjDwo9syWCAlLOyFPBQYWV3oeE3gOxW\",\"client_secret\":\"2gTcRtLYenavDXO6Xl7T-A4G1V0LUDc_YOpizZOot2jQ5WiBNmWKq3J-ubrS0Yxc\",\"audience\":\"https://api.almbrand.dk/\",\"grant_type\":\"client_credentials\"}"
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "Get 'finance' product info",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
-									""
-								]
-							}
-						}
-					],
-					"request": {
-						"url": "{{api_url}}/products/insurance-car-finance",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{access_token}}",
-								"description": ""
-							},
-							{
-								"key": "Ocp-Apim-Subscription-Key",
-								"value": "{{Ocp-Apim-Subscription-Key}}",
-								"description": ""
-							},
-							{
-								"key": "Ocp-Apim-Trace",
-								"value": "true",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"client_id\":\"GsjDwo9syWCAlLOyFPBQYWV3oeE3gOxW\",\"client_secret\":\"2gTcRtLYenavDXO6Xl7T-A4G1V0LUDc_YOpizZOot2jQ5WiBNmWKq3J-ubrS0Yxc\",\"audience\":\"https://api.almbrand.dk/\",\"grant_type\":\"client_credentials\"}"
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "Get 'standalone' product info",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
-									""
-								]
-							}
-						}
-					],
-					"request": {
-						"url": "{{api_url}}/products/insurance-car-standalone",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{access_token}}",
-								"description": ""
-							},
-							{
-								"key": "Ocp-Apim-Subscription-Key",
-								"value": "{{Ocp-Apim-Subscription-Key}}",
-								"description": ""
-							},
-							{
-								"key": "Ocp-Apim-Trace",
-								"value": "true",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"client_id\":\"GsjDwo9syWCAlLOyFPBQYWV3oeE3gOxW\",\"client_secret\":\"2gTcRtLYenavDXO6Xl7T-A4G1V0LUDc_YOpizZOot2jQ5WiBNmWKq3J-ubrS0Yxc\",\"audience\":\"https://api.almbrand.dk/\",\"grant_type\":\"client_credentials\"}"
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
 					"name": "Get price offer for 'leasing' product",
 					"event": [
 						{
@@ -252,7 +259,7 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json; charset=UTF-8",
+								"value": "application/json",
 								"description": ""
 							},
 							{
@@ -263,7 +270,8 @@
 							{
 								"key": "Ocp-Apim-Subscription-Key",
 								"value": "{{Ocp-Apim-Subscription-Key}}",
-								"description": ""
+								"description": "",
+								"disabled": true
 							},
 							{
 								"key": "Ocp-Apim-Trace",
@@ -273,7 +281,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{ \r\n  \"product\": {\r\n    \"product_name\" : \"insurance-car-leasing\",\r\n\r\n    \"parameters\" : {\r\n      \"brand_id\" : \"vw\",\r\n      \"youngest_user_birthdate\" : \"1970-12-31\",\r\n      \"vehicle_price\" : 434000,\r\n      \"vehicle_type\" : \"personbil\",\r\n      \"vehicle_usage\" : \"privat_person_koersel\",\r\n      \"vehicle_user\" : \"person\",\r\n      \"vehicle_owner\" : \"partner\",\r\n      \"policy_holder\" : \"person\",\r\n      \"payments_per_year\" : 1,\r\n      \"deductible_id\" : \"70\",\r\n      \"currency\" : \"DKK\"\r\n    },\r\n\r\n    \"features\" : [\r\n       {  \"name\" : \"premium\" }\r\n    ]\r\n\r\n  }\r\n}"
+							"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-leasing\",\r\n        \"parameters\": {\r\n            \"payments_per_year\": \"12\",\r\n            \"policy_holder\": \"person\",\r\n            \"vehicle_price\": \"359000\",\r\n            \"vehicle_user\": \"person\",\r\n            \"youngest_user_birthdate\": \"1977-12-31\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"standard\"\r\n            }\r\n        ]\r\n    }\r\n}"
 						},
 						"description": ""
 					},
