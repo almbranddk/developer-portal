@@ -296,7 +296,8 @@
 								"type": "text/javascript",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
-									"\r",
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"quote_id\", jsonData.quote_id);\r",
 									""
 								]
 							}
@@ -329,7 +330,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"product\":{\"product_name\":\"insurance-car-standalone\",\"parameters\":{\"brand_id\":\"vw\",      \"youngest_user_birthdate\" : \"1970-12-31\",\"vehicle_price\":434000,\"vehicle_type\":\"personbil\",\"vehicle_usage\":\"privat_person_koersel\",\"vehicle_user\":\"person\",\"vehicle_owner\":\"person\",\"policy_holder\":\"person\",\"payments_per_year\":1,\"deductible_id\":\"70\",\"currency\":\"DKK\"},\"features\":[{\"name\":\"premium\"}]},\"policy\":{\"external_reference\":\"202 00 97 62 01\",\"expected_effective_at\":\"2020-12-31\",\"insurable_object\":{\"vehicle\":{\"make\":\"VW\",\"model\":\"Polo\",\"variant\":\"1,0 TSI Highline DSG 115HK 5d 7g Aut. \\u2013 2018\",\"vin\":\"1MMBB41JXYN109186\"}},\"parties\":[{\"policy_holder\":true,\"vehicle_user\":true,\"person\":{\"cpr_number\":\"0101701234\",\"first_name\":\"Rene\",\"last_name\":\"Hansen\"},\"phone\":\"96101717\",\"email\":\"person1@example.com\",\"address\":{\"protected\":false,\"street\":\"Midtermolen\",\"house_number\":\"7A\",\"floor\":\"2\",\"door\":\"2.1\",\"postal_code\":\"2100\",\"city\":\"København Ø\"}}]},\"agent\":{\"user_id\":\"jsl@vw.dk\",\"organization\":{\"name\":\"SEMLER RETAIL HOLBÆK A/S\",\"cvr_number\":\"21742031\",\"cvrp_number\":\"1005168532\"}}}\r\n"
+							"raw": "{\r\n  \"product\": {\r\n    \"product_name\": \"insurance-car-leasing\",\r\n    \"parameters\": {\r\n      \"payments_per_year\": \"12\",\r\n      \"policy_holder\": \"person\",\r\n      \"vehicle_price\": \"359000\",\r\n      \"vehicle_user\": \"person\",\r\n      \"youngest_user_birthdate\": \"1977-12-31\"\r\n    },\r\n    \"features\": [\r\n      {\r\n        \"name\": \"standard\"\r\n      }\r\n    ]\r\n  },\r\n  \"policy\": {\r\n    \"external_reference\": \"20200976201\",\r\n    \"expected_effective_at\": \"2020-12-31\",\r\n    \"insurable_object\": {\r\n      \"vehicle\": {\r\n        \"make\": \"VW\",\r\n        \"model\": \"Polo\",\r\n        \"variant\": \"1,0 TSI Highline DSG 115HK 5d 7g Aut. \\u2013 2018\",\r\n        \"vin\": \"1MMBB41JXYN109186\"\r\n      }\r\n    },\r\n    \"parties\": [\r\n      {\r\n        \"policy_holder\": true,\r\n        \"vehicle_user\": true,\r\n        \"person\": {\r\n          \"cpr_number\": \"1604630610\",\r\n          \"first_name\": \"Rene\",\r\n          \"last_name\": \"Hansen\"\r\n        },\r\n        \"phone\": \"96101717\",\r\n        \"email\": \"person1@example.com\",\r\n        \"address\": {\r\n          \"protected\": false,\r\n          \"street\": \"Midtermolen\",\r\n          \"house_number\": \"7A\",\r\n          \"floor\": \"2\",\r\n          \"door\": \"2.1\",\r\n          \"postal_code\": 2100,\r\n          \"city\": \"København Ø\"\r\n        }\r\n      }\r\n    ]\r\n  },\r\n  \"agent\": {\r\n    \"user_id\": \"jsl@vw.dk\",\r\n    \"organization\": {\r\n      \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\r\n      \"cvr_number\": \"21742031\",\r\n      \"cvrp_number\": \"1005168532\"\r\n    }\r\n  }\r\n}"
 						},
 						"description": ""
 					},
