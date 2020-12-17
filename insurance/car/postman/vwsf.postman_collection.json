@@ -12,7 +12,7 @@
 			"description": "",
 			"item": [
 				{
-					"name": "product info",
+					"name": "products",
 					"description": "",
 					"item": [
 						{
@@ -63,7 +63,7 @@
 							"response": []
 						},
 						{
-							"name": "Get 'leasing' product info",
+							"name": "Get product - insurance-car-leasing",
 							"event": [
 								{
 									"listen": "test",
@@ -110,7 +110,7 @@
 							"response": []
 						},
 						{
-							"name": "Get 'finance' product info",
+							"name": "Get product - insurance-car-finance",
 							"event": [
 								{
 									"listen": "test",
@@ -157,7 +157,7 @@
 							"response": []
 						},
 						{
-							"name": "Get 'standalone' product info",
+							"name": "Get product - insurance-car-standalone",
 							"event": [
 								{
 									"listen": "test",
@@ -202,8 +202,793 @@
 								"description": ""
 							},
 							"response": []
+						},
+						{
+							"name": "Get product - partner-insurance-car-leasing",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/products/partner-insurance-car-leasing",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"client_id\":\"GsjDwo9syWCAlLOyFPBQYWV3oeE3gOxW\",\"client_secret\":\"2gTcRtLYenavDXO6Xl7T-A4G1V0LUDc_YOpizZOot2jQ5WiBNmWKq3J-ubrS0Yxc\",\"audience\":\"https://api.almbrand.dk/\",\"grant_type\":\"client_credentials\"}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get product - partner-insurance-car-finance",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/products/partner-insurance-car-finance",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"client_id\":\"GsjDwo9syWCAlLOyFPBQYWV3oeE3gOxW\",\"client_secret\":\"2gTcRtLYenavDXO6Xl7T-A4G1V0LUDc_YOpizZOot2jQ5WiBNmWKq3J-ubrS0Yxc\",\"audience\":\"https://api.almbrand.dk/\",\"grant_type\":\"client_credentials\"}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get product - partner-insurance-car-standalone",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/products/partner-insurance-car-standalone",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"client_id\":\"GsjDwo9syWCAlLOyFPBQYWV3oeE3gOxW\",\"client_secret\":\"2gTcRtLYenavDXO6Xl7T-A4G1V0LUDc_YOpizZOot2jQ5WiBNmWKq3J-ubrS0Yxc\",\"audience\":\"https://api.almbrand.dk/\",\"grant_type\":\"client_credentials\"}"
+								},
+								"description": ""
+							},
+							"response": []
 						}
 					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "standard offers",
+					"description": "",
+					"item": [
+						{
+							"name": "Get offer - personbil insurance-car-leasing",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/insurance/car/offers",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": "",
+										"disabled": true
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-leasing\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"personbil\",\r\n            \"vehicle_usage\": \"privat_person_koersel\",\r\n            \"vehicle_user\": \"person\",            \r\n            \"vehicle_owner\": \"partner\",\r\n            \"policy_holder\": \"person\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\",\r\n            \"youngest_driver_age\": \"34\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"premium\"\r\n            }\r\n        ]\r\n    }\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get offer - varevogn insurance-car-leasing",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/insurance/car/offers",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": "",
+										"disabled": true
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-leasing\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"varevogn\",\r\n            \"vehicle_usage\": \"privat_person_koersel\",\r\n            \"vehicle_user\": \"person\",            \r\n            \"vehicle_owner\": \"partner\",\r\n            \"policy_holder\": \"person\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\",\r\n            \"youngest_driver_age\": \"34\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"premium\"\r\n            }\r\n        ]\r\n    }\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get offer - varevogn godtransport insurance-car-leasing",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/insurance/car/offers",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": "",
+										"disabled": true
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-leasing\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"varevogn\",\r\n            \"vehicle_usage\": \"godstransport\",\r\n            \"vehicle_user\": \"person\",            \r\n            \"vehicle_owner\": \"partner\",\r\n            \"policy_holder\": \"person\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\",\r\n            \"youngest_driver_age\": \"34\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"premium\"\r\n            }\r\n        ]\r\n    }\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get offer - personbil insurance-car-finance",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/insurance/car/offers",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": "",
+										"disabled": true
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-finance\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"personbil\",\r\n            \"vehicle_usage\": \"privat_person_koersel\",\r\n            \"vehicle_user\": \"person\",            \r\n            \"vehicle_owner\": \"person\",\r\n            \"policy_holder\": \"person\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\",\r\n            \"youngest_driver_age\": \"34\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"premium\"\r\n            }\r\n        ]\r\n    }\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get offer - varevogn godstransport insurance-car-finance",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/insurance/car/offers",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": "",
+										"disabled": true
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-finance\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"varevogn\",\r\n            \"vehicle_usage\": \"godstransport\",\r\n            \"vehicle_user\": \"person\",            \r\n            \"vehicle_owner\": \"person\",\r\n            \"policy_holder\": \"person\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\",\r\n            \"youngest_driver_age\": \"34\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"premium\"\r\n            }\r\n        ]\r\n    }\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get offer - personbil insurance-car-standalone",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/insurance/car/offers",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": "",
+										"disabled": true
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-standalone\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"personbil\",\r\n            \"vehicle_usage\": \"privat_person_koersel\",\r\n            \"vehicle_user\": \"person\",            \r\n            \"vehicle_owner\": \"person\",\r\n            \"policy_holder\": \"person\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\",\r\n            \"youngest_driver_age\": \"34\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"premium\"\r\n            }\r\n        ]\r\n    }\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get offer - varevogn godstransport insurance-car-standalone",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/insurance/car/offers",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": "",
+										"disabled": true
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-standalone\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"varevogn\",\r\n            \"vehicle_usage\": \"godstransport\",\r\n            \"vehicle_user\": \"person\",            \r\n            \"vehicle_owner\": \"person\",\r\n            \"policy_holder\": \"person\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\",\r\n            \"youngest_driver_age\": \"34\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"premium\"\r\n            }\r\n        ]\r\n    }\r\n}\r\n"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "extended offers",
+					"description": "",
+					"item": [
+						{
+							"name": "Get offer - varevogn insurance-car-leasing",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/insurance/car/offers",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": "",
+										"disabled": true
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-leasing\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"varevogn\",\r\n            \"vehicle_usage\": \"privat_person_koersel\",\r\n            \"vehicle_user\": \"person\",            \r\n            \"vehicle_owner\": \"partner\",\r\n            \"policy_holder\": \"organization\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\",\r\n            \"youngest_driver_age\": \"34\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"premium\"\r\n            }\r\n        ]\r\n    }\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get offer - firmabil insurance-car-leasing",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/insurance/car/offers",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": "",
+										"disabled": true
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-leasing\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"personbil\",\r\n            \"vehicle_usage\": \"privat_person_koersel\",\r\n            \"vehicle_user\": \"person\",            \r\n            \"vehicle_owner\": \"partner\",\r\n            \"policy_holder\": \"organization\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\",\r\n            \"youngest_driver_age\": \"34\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"premium\"\r\n            }\r\n        ]\r\n    }\r\n}\r\n"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get offer - personbil person insurance-car-finance",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/insurance/car/offers",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": "",
+										"disabled": true
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-finance\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"personbil\",\r\n            \"vehicle_usage\": \"privat_person_koersel\",\r\n            \"vehicle_user\": \"person\",            \r\n            \"vehicle_owner\": \"organization\",\r\n            \"policy_holder\": \"organization\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\",\r\n            \"youngest_driver_age\": \"34\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"premium\"\r\n            }\r\n        ]\r\n    }\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get offer - personbil organization insurance-car-finance",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/insurance/car/offers",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": "",
+										"disabled": true
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-finance\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"personbil\",\r\n            \"vehicle_usage\": \"privat_person_koersel\",\r\n            \"vehicle_user\": \"organization\",            \r\n            \"vehicle_owner\": \"organization\",\r\n            \"policy_holder\": \"organization\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\",\r\n            \"youngest_driver_age\": \"34\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"premium\"\r\n            }\r\n        ]\r\n    }\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get offer - personbil insurance-car-standalone",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/insurance/car/offers",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": "",
+										"disabled": true
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-standalone\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"personbil\",\r\n            \"vehicle_usage\": \"privat_person_koersel\",\r\n            \"vehicle_user\": \"person\",            \r\n            \"vehicle_owner\": \"organization\",\r\n            \"policy_holder\": \"organization\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\",\r\n            \"youngest_driver_age\": \"34\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"premium\"\r\n            }\r\n        ]\r\n    }\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get offer - personbil organization insurance-car-standalone",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"url": "{{api_url}}/insurance/car/offers",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"description": ""
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"description": "",
+										"disabled": true
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-standalone\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"personbil\",\r\n            \"vehicle_usage\": \"privat_person_koersel\",\r\n            \"vehicle_user\": \"organization\",            \r\n            \"vehicle_owner\": \"organization\",\r\n            \"policy_holder\": \"organization\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\",\r\n            \"youngest_driver_age\": \"34\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"premium\"\r\n            }\r\n        ]\r\n    }\r\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "quotes",
+					"description": "",
+					"item": [],
 					"_postman_isSubFolder": true
 				},
 				{
@@ -240,7 +1025,7 @@
 					"response": []
 				},
 				{
-					"name": "Get price offer for 'leasing' product",
+					"name": "Get standard offer - insurance-car-leasing",
 					"event": [
 						{
 							"listen": "test",
@@ -281,14 +1066,14 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-leasing\",\r\n        \"parameters\": {\r\n            \"payments_per_year\": \"12\",\r\n            \"policy_holder\": \"person\",\r\n            \"vehicle_price\": \"359000\",\r\n            \"vehicle_user\": \"person\",\r\n            \"youngest_user_birthdate\": \"1977-12-31\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"standard\"\r\n            }\r\n        ]\r\n    }\r\n}"
+							"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-leasing\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"personbil\",\r\n            \"vehicle_usage\": \"privat_person_koersel\",\r\n            \"vehicle_user\": \"person\",            \r\n            \"vehicle_owner\": \"partner\",\r\n            \"policy_holder\": \"person\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\",\r\n            \"youngest_driver_age\": \"34\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"standard\"\r\n            }\r\n        ]\r\n    }\r\n}"
 						},
 						"description": ""
 					},
 					"response": []
 				},
 				{
-					"name": "Create price quote for 'leasing' product",
+					"name": "Create standard quote -insurance-car-leasing",
 					"event": [
 						{
 							"listen": "test",
@@ -330,14 +1115,14 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"product\": {\r\n    \"product_name\": \"insurance-car-leasing\",\r\n    \"parameters\": {\r\n      \"payments_per_year\": \"12\",\r\n      \"policy_holder\": \"person\",\r\n      \"vehicle_price\": \"359000\",\r\n      \"vehicle_user\": \"person\",\r\n      \"youngest_user_birthdate\": \"1977-12-31\"\r\n    },\r\n    \"features\": [\r\n      {\r\n        \"name\": \"standard\"\r\n      }\r\n    ]\r\n  },\r\n  \"policy\": {\r\n    \"external_reference\": \"20200976201\",\r\n    \"expected_effective_at\": \"2020-12-31\",\r\n    \"insurable_object\": {\r\n      \"vehicle\": {\r\n        \"make\": \"VW\",\r\n        \"model\": \"Polo\",\r\n        \"variant\": \"1,0 TSI Highline DSG 115HK 5d 7g Aut. \\u2013 2018\",\r\n        \"vin\": \"1MMBB41JXYN109186\"\r\n      }\r\n    },\r\n    \"parties\": [\r\n      {\r\n        \"policy_holder\": true,\r\n        \"vehicle_user\": true,\r\n        \"person\": {\r\n          \"cpr_number\": \"1604630610\",\r\n          \"first_name\": \"Rene\",\r\n          \"last_name\": \"Hansen\"\r\n        },\r\n        \"phone\": \"96101717\",\r\n        \"email\": \"person1@example.com\",\r\n        \"address\": {\r\n          \"protected\": false,\r\n          \"street\": \"Midtermolen\",\r\n          \"house_number\": \"7A\",\r\n          \"floor\": \"2\",\r\n          \"door\": \"2.1\",\r\n          \"postal_code\": 2100,\r\n          \"city\": \"København Ø\"\r\n        }\r\n      }\r\n    ]\r\n  },\r\n  \"agent\": {\r\n    \"user_id\": \"jsl@vw.dk\",\r\n    \"organization\": {\r\n      \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\r\n      \"cvr_number\": \"21742031\",\r\n      \"cvrp_number\": \"1005168532\"\r\n    }\r\n  }\r\n}"
+							"raw": "{\r\n  \"product\": {\r\n    \"product_name\": \"insurance-car-leasing\",\r\n    \"parameters\": {            \r\n            \"vehicle_type\": \"personbil\",\r\n            \"vehicle_usage\": \"privat_person_koersel\",\r\n            \"vehicle_user\": \"person\",            \r\n            \"vehicle_owner\": \"partner\",\r\n            \"policy_holder\": \"person\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\",\r\n            \"youngest_driver_age\": \"34\"\r\n    },\r\n    \"features\": [\r\n      {\r\n        \"name\": \"standard\"\r\n      }\r\n    ]\r\n  },\r\n  \"policy\": {\r\n    \"external_reference\": \"20200976201\",\r\n    \"expected_effective_at\": \"2020-12-31\",\r\n    \"insurable_object\": {\r\n      \"vehicle\": {\r\n        \"make\": \"VW\",\r\n        \"model\": \"Polo\",\r\n        \"variant\": \"1,0 TSI Highline DSG 115HK 5d 7g Aut. \\u2013 2018\",\r\n        \"vin\": \"1MMBB41JXYN109186\"\r\n      }\r\n    },\r\n    \"parties\": [\r\n      {\r\n        \"policy_holder\": true,\r\n        \"vehicle_user\": true,\r\n        \"person\": {\r\n          \"cpr_number\": \"1604630610\",\r\n          \"first_name\": \"Rene\",\r\n          \"last_name\": \"Hansen\"\r\n        },\r\n        \"phone\": \"96101717\",\r\n        \"email\": \"person1@example.com\",\r\n        \"address\": {\r\n          \"protected\": false,\r\n          \"street\": \"Midtermolen\",\r\n          \"house_number\": \"7A\",\r\n          \"floor\": \"2\",\r\n          \"door\": \"2.1\",\r\n          \"postal_code\": 2100,\r\n          \"city\": \"København Ø\"\r\n        }\r\n      }\r\n    ]\r\n  },\r\n  \"agent\": {\r\n    \"user_id\": \"jsl@vw.dk\",\r\n    \"organization\": {\r\n      \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\r\n      \"cvr_number\": \"21742031\",\r\n      \"cvrp_number\": \"1005168532\"\r\n    }\r\n  }\r\n}"
 						},
 						"description": ""
 					},
 					"response": []
 				},
 				{
-					"name": "Get previous created price quote",
+					"name": "Get previous created quote",
 					"event": [
 						{
 							"listen": "test",
