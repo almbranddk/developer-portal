@@ -1091,8 +1091,451 @@
 					]
 				},
 				{
-					"name": "quotes",
-					"item": []
+					"name": "quotes - standard private",
+					"item": [
+						{
+							"name": "Create quote - standard leasing",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											"var jsonData = JSON.parse(responseBody);\r",
+											"postman.setEnvironmentVariable(\"quote_id\", jsonData.quote_id);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}"
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {            \n            \"vehicle_type\": \"personbil\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"person\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"359000\",\n            \"youngest_user_birthdate\": \"1977-08-19\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n    \"policy\" : {\n    \"external_reference\" : \"20200976201\",\n    \"expected_effective_at\" : \"2020-12-31\",\n    \"insurable_object\" : {\n      \"vehicle\" : {\n        \"make\" : \"VW\",\n        \"model\" : \"Transporter\",\n        \"variant\" : \"6.1\",\n        \"vin\" : \"1MMBB41JXYN109186\",\n        \"registration_number\" : \"AK47540\"\n      }\n    },\n    \"parties\" :[\n      {\n        \"user\"  : true,\n        \"holder\" : true,\n        \"person\" : {\n          \"cpr_number\":\"0101701234\",\n          \"first_name\" : \"Rene\",\n          \"last_name\" : \"Hansen\"\n        },\n        \"phone\": \"96101717\",\n        \"email\": \"jb@az.com\",\n        \"address\" : {\n          \"protected\": false,\n          \"street\" : \"Midtermolen\",\n          \"house_number\" : \"7A\",\n          \"floor\": \"2\",\n          \"door\" : \"2.1\",\n          \"postal_code\": 2100,\n          \"city\" : \"København Ø\"\n        }\n      }\n    ]\n  },\n  \"agent\" : {\n    \"user_id\"  : \"jsl@vw.dk\",\n    \"organization\" : {\n      \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n      \"cvr_number\" : \"21742031\",\n      \"cvrp_number\" : \"1005168532\"\n    }\n  }\n}"
+								},
+								"url": "{{api_url}}/insurance/car/quotes"
+							},
+							"response": []
+						},
+						{
+							"name": "Activate Quote",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}"
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}\r\n"
+								},
+								"url": "{{api_url}}/insurance/car/quotes/{{quote_id}}/activation"
+							},
+							"response": []
+						},
+						{
+							"name": "Get previous created quote",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}"
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true"
+									}
+								],
+								"url": "{{api_url}}/insurance/car/quotes/{{quote_id}}"
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "quotes - standard business",
+					"item": [
+						{
+							"name": "Create quote - leasing firmabil",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											"var jsonData = JSON.parse(responseBody);\r",
+											"postman.setEnvironmentVariable(\"quote_id\", jsonData.quote_id);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}"
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {            \n            \"vehicle_type\": \"personbil\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"person\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"359000\",\n            \"youngest_user_birthdate\": \"1977-08-19\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n    \"policy\" : {\n    \"external_reference\" : \"20200976201\",\n    \"expected_effective_at\" : \"2020-12-31\",\n    \"insurable_object\" : {\n      \"vehicle\" : {\n        \"make\" : \"VW\",\n        \"model\" : \"Transporter\",\n        \"variant\" : \"6.1\",\n        \"vin\" : \"1MMBB41JXYN109186\",\n        \"registration_number\" : \"AK47540\"\n      }\n    },\n    \"parties\" :[\n      {\n        \"user\"  : true,\n        \"holder\" : true,\n        \"person\" : {\n          \"cpr_number\":\"0101701234\",\n          \"first_name\" : \"Rene\",\n          \"last_name\" : \"Hansen\"\n        },\n        \"phone\": \"96101717\",\n        \"email\": \"jb@az.com\",\n        \"address\" : {\n          \"protected\": false,\n          \"street\" : \"Midtermolen\",\n          \"house_number\" : \"7A\",\n          \"floor\": \"2\",\n          \"door\" : \"2.1\",\n          \"postal_code\": 2100,\n          \"city\" : \"København Ø\"\n        }\n      }\n    ]\n  },\n  \"agent\" : {\n    \"user_id\"  : \"jsl@vw.dk\",\n    \"organization\" : {\n      \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n      \"cvr_number\" : \"21742031\",\n      \"cvrp_number\" : \"1005168532\"\n    }\n  }\n}"
+								},
+								"url": "{{api_url}}/insurance/car/quotes"
+							},
+							"response": []
+						},
+						{
+							"name": "Activate Quote",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}"
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}\r\n"
+								},
+								"url": "{{api_url}}/insurance/car/quotes/{{quote_id}}/activation"
+							},
+							"response": []
+						},
+						{
+							"name": "Get previous created quote",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}"
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true"
+									}
+								],
+								"url": "{{api_url}}/insurance/car/quotes/{{quote_id}}"
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "quotes - extended",
+					"item": [
+						{
+							"name": "Create quote -  leasing person varevogn godstransport (WIP)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											"var jsonData = JSON.parse(responseBody);\r",
+											"postman.setEnvironmentVariable(\"quote_id\", jsonData.quote_id);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}"
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {            \n            \"vehicle_type\": \"personbil\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"person\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"359000\",\n            \"youngest_user_birthdate\": \"1977-08-19\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n    \"policy\" : {\n    \"external_reference\" : \"20200976201\",\n    \"expected_effective_at\" : \"2020-12-31\",\n    \"insurable_object\" : {\n      \"vehicle\" : {\n        \"make\" : \"VW\",\n        \"model\" : \"Transporter\",\n        \"variant\" : \"6.1\",\n        \"vin\" : \"1MMBB41JXYN109186\",\n        \"registration_number\" : \"AK47540\"\n      }\n    },\n    \"parties\" :[\n      {\n        \"user\"  : true,\n        \"holder\" : true,\n        \"person\" : {\n          \"cpr_number\":\"0101701234\",\n          \"first_name\" : \"Rene\",\n          \"last_name\" : \"Hansen\"\n        },\n        \"phone\": \"96101717\",\n        \"email\": \"jb@az.com\",\n        \"address\" : {\n          \"protected\": false,\n          \"street\" : \"Midtermolen\",\n          \"house_number\" : \"7A\",\n          \"floor\": \"2\",\n          \"door\" : \"2.1\",\n          \"postal_code\": 2100,\n          \"city\" : \"København Ø\"\n        }\n      }\n    ]\n  },\n  \"agent\" : {\n    \"user_id\"  : \"jsl@vw.dk\",\n    \"organization\" : {\n      \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n      \"cvr_number\" : \"21742031\",\n      \"cvrp_number\" : \"1005168532\"\n    }\n  }\n}"
+								},
+								"url": "{{api_url}}/insurance/car/quotes"
+							},
+							"response": []
+						},
+						{
+							"name": "Activate Quote",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}"
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}\r\n"
+								},
+								"url": "{{api_url}}/insurance/car/quotes/{{quote_id}}/activation"
+							},
+							"response": []
+						},
+						{
+							"name": "Get previous created quote",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}"
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true"
+									}
+								],
+								"url": "{{api_url}}/insurance/car/quotes/{{quote_id}}"
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
 				},
 				{
 					"name": "Get access token",
@@ -1208,130 +1651,6 @@
 							"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-leasing\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"varevogn\",\r\n            \"vehicle_usage\": \"godstransport\",\r\n            \"vehicle_user\": \"organization\",            \r\n            \"vehicle_owner\": \"organization\",\r\n            \"policy_holder\": \"organization\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\",\r\n            \"youngest_user_birthdate\": \"1977-08-19\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"premium\"\r\n            }\r\n        ]\r\n    }\r\n}\r\n"
 						},
 						"url": "{{api_url}}/insurance/car/offers"
-					},
-					"response": []
-				},
-				{
-					"name": "Create quote - standard leasing",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
-									"var jsonData = JSON.parse(responseBody);\r",
-									"postman.setEnvironmentVariable(\"quote_id\", jsonData.quote_id);\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{access_token}}"
-							},
-							{
-								"key": "Ocp-Apim-Subscription-Key",
-								"value": "{{Ocp-Apim-Subscription-Key}}"
-							},
-							{
-								"key": "Ocp-Apim-Trace",
-								"value": "true"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {            \n            \"vehicle_type\": \"personbil\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"person\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"359000\",\n            \"youngest_user_birthdate\": \"1977-08-19\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n    \"policy\" : {\n    \"external_reference\" : \"20200976201\",\n    \"expected_effective_at\" : \"2020-12-31\",\n    \"insurable_object\" : {\n      \"vehicle\" : {\n        \"make\" : \"VW\",\n        \"model\" : \"Transporter\",\n        \"variant\" : \"6.1\",\n        \"vin\" : \"1MMBB41JXYN109186\",\n        \"registration_number\" : \"AK47540\"\n      }\n    },\n    \"parties\" :[\n      {\n        \"user\"  : true,\n        \"holder\" : true,\n        \"person\" : {\n          \"cpr_number\":\"0101701234\",\n          \"first_name\" : \"Rene\",\n          \"last_name\" : \"Hansen\"\n        },\n        \"phone\": \"96101717\",\n        \"email\": \"jb@az.com\",\n        \"address\" : {\n          \"protected\": false,\n          \"street\" : \"Midtermolen\",\n          \"house_number\" : \"7A\",\n          \"floor\": \"2\",\n          \"door\" : \"2.1\",\n          \"postal_code\": 2100,\n          \"city\" : \"København Ø\"\n        }\n      }\n    ]\n  },\n  \"agent\" : {\n    \"user_id\"  : \"jsl@vw.dk\",\n    \"organization\" : {\n      \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n      \"cvr_number\" : \"21742031\",\n      \"cvrp_number\" : \"1005168532\"\n    }\n  }\n}"
-						},
-						"url": "{{api_url}}/insurance/car/quotes"
-					},
-					"response": []
-				},
-				{
-					"name": "Get previous created quote",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{access_token}}"
-							},
-							{
-								"key": "Ocp-Apim-Subscription-Key",
-								"value": "{{Ocp-Apim-Subscription-Key}}"
-							},
-							{
-								"key": "Ocp-Apim-Trace",
-								"value": "true"
-							}
-						],
-						"url": "{{api_url}}/insurance/car/quotes/{{quote_id}}"
-					},
-					"response": []
-				},
-				{
-					"name": "Activate Quote",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
-									""
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{access_token}}"
-							},
-							{
-								"key": "Ocp-Apim-Subscription-Key",
-								"value": "{{Ocp-Apim-Subscription-Key}}"
-							},
-							{
-								"key": "Ocp-Apim-Trace",
-								"value": "true"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{}\r\n"
-						},
-						"url": "{{api_url}}/insurance/car/quotes/{{quote_id}}/activation"
 					},
 					"response": []
 				}
