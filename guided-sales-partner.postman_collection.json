@@ -1,7 +1,8 @@
 {
 	"info": {
-		"_postman_id": "f0103025-2efa-4238-a5ad-91db79e01872",
-		"name": "Guided Sales - Partner",
+		"name": "Guided Sales - Partner Test",
+		"_postman_id": "d7324409-ccf1-2f06-da9c-794319a38e51",
+		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -17,7 +18,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c6f5b3db-9d94-4789-b2aa-c44e8278dd7b",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											"var jsonData = JSON.parse(responseBody);\r",
@@ -49,7 +49,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "050db8b0-a989-4ccb-8ba7-64690fd001c5",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -58,9 +57,6 @@
 									}
 								}
 							],
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
 							"request": {
 								"method": "GET",
 								"header": [
@@ -95,7 +91,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d4df766f-9ffe-4327-861f-e81106c7af4f",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -124,6 +119,7 @@
 										"value": "true"
 									}
 								],
+								"body": {},
 								"url": "{{api_url}}/products/insurance-car-leasing"
 							},
 							"response": []
@@ -134,7 +130,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ae46d3ec-4f75-48bf-aaff-186b0d4efff2",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -163,6 +158,7 @@
 										"value": "true"
 									}
 								],
+								"body": {},
 								"url": "{{api_url}}/products/insurance-car-finance"
 							},
 							"response": []
@@ -173,7 +169,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d5463e73-4809-4cc0-828b-e8dc1463f60e",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -202,16 +197,16 @@
 										"value": "true"
 									}
 								],
+								"body": {},
 								"url": "{{api_url}}/products/insurance-car-standalone"
 							},
 							"response": []
 						}
 					],
-					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "offers - standard private",
+					"name": "offers - standard personal",
 					"item": [
 						{
 							"name": "Get access token",
@@ -219,7 +214,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "71094213-543b-433b-bc7e-77eb46fa594f",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											"var jsonData = JSON.parse(responseBody);\r",
@@ -251,7 +245,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "0341d16e-ab46-412d-8d36-63666bf1dd7b",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -295,7 +288,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "9e0128ac-7695-42ce-82a5-dabb426c719a",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -339,7 +331,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "1796c5a7-a908-460d-8558-e706eec9d35e",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -383,7 +374,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "de9eb57c-88bc-4a12-8a4a-31ef4d563c6d",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -427,7 +417,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "9a0e6d57-fb2c-45a9-9b6a-ce797d1f72ee",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -471,7 +460,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "9c8dcb50-e5d2-453e-ab5a-62dee555e6f4",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -515,7 +503,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "691c1717-67ef-4881-a7fb-5dd12c65a441",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -559,7 +546,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c5e67f77-8005-40e3-b5b9-74e00ce74ae8",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -603,7 +589,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "7934b90f-e0aa-47a7-b00c-67d8100694a3",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -647,7 +632,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b5c27348-2943-4295-b7b3-228f60ac9238",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -691,7 +675,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "076cf309-8049-4219-9ed4-87e4c83c0abc",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -735,7 +718,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "3fc98028-5964-47dc-b074-5fa5abef785d",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -774,11 +756,10 @@
 							"response": []
 						}
 					],
-					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "offers - standard business",
+					"name": "offers - standard comercial",
 					"item": [
 						{
 							"name": "Get access token",
@@ -786,7 +767,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "85acc34f-0164-4239-8a67-290f00bfcb5f",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											"var jsonData = JSON.parse(responseBody);\r",
@@ -818,7 +798,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "95228cd7-1bf9-448d-89f9-51c6c7f54e14",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -861,7 +840,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "0a0086c5-e96c-4c44-befa-46d8ec06dc02",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -899,12 +877,53 @@
 							"response": []
 						},
 						{
+							"name": "sb-003 Get offer - leasing personbil",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}"
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}"
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-leasing\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"personbil\",\r\n            \"vehicle_usage\": \"privat_person_koersel\",\r\n            \"vehicle_user\": \"organization\",            \r\n            \"vehicle_owner\": \"organization\",\r\n            \"policy_holder\": \"organization\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"premium\"\r\n            }\r\n        ]\r\n    }\r\n}\r\n"
+								},
+								"url": "{{api_url}}/insurance/car/offers"
+							},
+							"response": []
+						},
+						{
 							"name": "sb-101 Get offer - finance personbil person",
 							"event": [
 								{
 									"listen": "test",
 									"script": {
-										"id": "88e14b90-2f11-46b6-bff0-9465827dc6a2",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -948,7 +967,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "035acc14-5223-4cab-b08e-e0412c3d51d1",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -992,7 +1010,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "a9c65791-f969-4e45-b6c0-870a41dbef7d",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -1036,7 +1053,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d781d2b1-c8dd-4f56-aac3-3809e538e065",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -1075,7 +1091,6 @@
 							"response": []
 						}
 					],
-					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -1087,7 +1102,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "65685919-4917-4a10-83ed-973e087243b8",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											"var jsonData = JSON.parse(responseBody);\r",
@@ -1119,7 +1133,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "71ab35f7-87fb-4b17-ba75-ba27b666058e",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -1151,7 +1164,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-leasing\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"varevogn\",\r\n            \"vehicle_usage\": \"godstransport\",\r\n            \"vehicle_user\": \"person\",            \r\n            \"vehicle_owner\": \"organization\",\r\n            \"policy_holder\": \"organization\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\",\r\n            \"youngest_user_birthdate\": \"1977-08-08\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"premium\"\r\n            }\r\n        ]\r\n    }\r\n}\r\n\r\n"
+									"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-leasing\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"varevogn\",\r\n            \"vehicle_usage\": \"godstransport\",\r\n            \"vehicle_user\": \"person\",            \r\n            \"vehicle_owner\": \"organization\",\r\n            \"policy_holder\": \"organization\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"premium\"\r\n            }\r\n        ]\r\n    }\r\n}\r\n\r\n"
 								},
 								"url": "{{api_url}}/insurance/car/offers"
 							},
@@ -1163,7 +1176,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "341e30c9-1ff3-4641-a86e-dfbbbd76ed58",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -1201,12 +1213,54 @@
 							"response": []
 						},
 						{
+							"name": "ex-102 Get offer - leasing organization varevogn godtransport",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}"
+									},
+									{
+										"key": "Ocp-Apim-Subscription-Key",
+										"value": "{{Ocp-Apim-Subscription-Key}}",
+										"disabled": true
+									},
+									{
+										"key": "Ocp-Apim-Trace",
+										"value": "true"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product\": {\r\n        \"product_name\": \"insurance-car-leasing\",\r\n        \"parameters\": {            \r\n            \"vehicle_type\": \"varevogn\",\r\n            \"vehicle_usage\": \"godstransport\",\r\n            \"vehicle_user\": \"organization\",            \r\n            \"vehicle_owner\": \"organization\",\r\n            \"policy_holder\": \"organization\",\r\n            \"payments_per_year\": \"1\",            \r\n            \"vehicle_price\": \"359000\",\r\n            \"youngest_user_birthdate\": \"1977-08-19\"\r\n        },\r\n        \"features\": [\r\n            {\r\n                \"name\": \"premium\"\r\n            }\r\n        ]\r\n    }\r\n}\r\n\r\n"
+								},
+								"url": "{{api_url}}/insurance/car/offers"
+							},
+							"response": []
+						},
+						{
 							"name": "ex-101 Get offer - fiannce person varevogn godstransport",
 							"event": [
 								{
 									"listen": "test",
 									"script": {
-										"id": "0f6337a1-e513-4f60-b4d9-3dbae618e30d",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -1250,7 +1304,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "eb637ed2-74c8-421f-97fa-c50909a25224",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -1294,7 +1347,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d095029b-0de0-4de7-9037-52b589387999",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -1338,7 +1390,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "fd4833f4-7cb3-4a82-8644-b375e4566b7b",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											""
@@ -1377,11 +1428,10 @@
 							"response": []
 						}
 					],
-					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "quotes - standard private",
+					"name": "quotes - standard personal",
 					"item": [
 						{
 							"name": "Get access token",
@@ -1389,7 +1439,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "a637e8e4-496b-43a7-80c1-bcee2ef39acc",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											"var jsonData = JSON.parse(responseBody);\r",
@@ -1440,7 +1489,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {            \n            \"vehicle_type\": \"personbil\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"person\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"390000\",\n            \"youngest_user_birthdate\": \"1977-08-19\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\",\n                    \"cpr_number\": \"1604639561\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {            \n            \"vehicle_type\": \"personbil\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"person\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"390000\",\n            \"youngest_user_birthdate\": \"1977-08-19\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n   \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n           {\n                \"vehicle_owner\": false,\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"person\": {\n                    \"cpr_number\": \"0101701234\",\n                    \"first_name\": \"Rene\",\n                    \"last_name\": \"Hansen\"\n                },\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"text\": \"Frederiksberg Allé 11b, st. tv, 1621 København V\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
@@ -1471,7 +1520,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {            \n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"person\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"359000\",\n            \"youngest_user_birthdate\": \"1977-08-19\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\",\n                    \"cpr_number\": \"1604639561\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {            \n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"person\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"359000\",\n            \"youngest_user_birthdate\": \"1977-08-19\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\",\n                    \"cpr_number\": \"1604639561\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }    \n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
@@ -1502,7 +1551,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {            \n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"person\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"359000\",\n            \"youngest_user_birthdate\": \"1977-08-19\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\",\n                    \"cpr_number\": \"1604639561\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {            \n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"person\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"359000\",\n            \"youngest_user_birthdate\": \"1977-08-19\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\",\n                    \"cpr_number\": \"1604639561\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
@@ -1533,7 +1582,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"person\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"359000\",\n            \"youngest_user_age\": \"45\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n    \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"person\": {\n                    \"first_name\": \"Ove\",\n                    \"last_name\": \"Brammer\",\n                    \"cpr_number\": \"1604639561\"\n                },\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"person\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"359000\",\n            \"youngest_user_age\": \"45\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n    \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"person\": {\n                    \"first_name\": \"Ove\",\n                    \"last_name\": \"Brammer\",\n                    \"cpr_number\": \"1604639561\"\n                },\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
@@ -1564,7 +1613,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport\",\n            \"vehicle_user\": \"person\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"person\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"359000\",\n            \"youngest_user_birthdate\": \"1977-08-19\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\",\n                    \"cpr_number\": \"1604639561\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport\",\n            \"vehicle_user\": \"person\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"person\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"359000\",\n            \"youngest_user_birthdate\": \"1977-08-19\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\",\n                    \"cpr_number\": \"1604639561\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
@@ -1595,7 +1644,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport\",\n            \"vehicle_user\": \"person\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"person\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"359000\",\n            \"youngest_user_age\": \"35\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\",\n                    \"cpr_number\": \"1604639561\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport\",\n            \"vehicle_user\": \"person\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"person\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"359000\",\n            \"youngest_user_age\": \"35\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\",\n                    \"cpr_number\": \"1604639561\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
@@ -1606,7 +1655,6 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "4f30b6f6-89aa-431c-8909-c6d82c42c0c0",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -1616,7 +1664,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "8ff62b61-0696-468b-852d-6cbe5ae4a126",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -1624,11 +1671,10 @@
 							}
 						}
 					],
-					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "quotes- standard business",
+					"name": "quotes- standard comercial",
 					"item": [
 						{
 							"name": "Get access token",
@@ -1636,7 +1682,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ff6713e5-8eb5-4fb0-b626-0ec5d929709d",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											"var jsonData = JSON.parse(responseBody);\r",
@@ -1669,28 +1714,24 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}",
-										"type": "text"
+										"value": "Bearer {{access_token}}"
 									},
 									{
 										"key": "Ocp-Apim-Subscription-Key",
-										"value": "{{Ocp-Apim-Subscription-Key}}",
-										"type": "text"
+										"value": "{{Ocp-Apim-Subscription-Key}}"
 									},
 									{
 										"key": "Ocp-Apim-Trace",
-										"value": "true",
-										"type": "text"
+										"value": "true"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {            \n            \"vehicle_type\": \"personbil\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {            \n            \"vehicle_type\": \"personbil\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
@@ -1703,28 +1744,24 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}",
-										"type": "text"
+										"value": "Bearer {{access_token}}"
 									},
 									{
 										"key": "Ocp-Apim-Subscription-Key",
-										"value": "{{Ocp-Apim-Subscription-Key}}",
-										"type": "text"
+										"value": "{{Ocp-Apim-Subscription-Key}}"
 									},
 									{
 										"key": "Ocp-Apim-Trace",
-										"value": "true",
-										"type": "text"
+										"value": "true"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {            \n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {            \n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
@@ -1737,28 +1774,24 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}",
-										"type": "text"
+										"value": "Bearer {{access_token}}"
 									},
 									{
 										"key": "Ocp-Apim-Subscription-Key",
-										"value": "{{Ocp-Apim-Subscription-Key}}",
-										"type": "text"
+										"value": "{{Ocp-Apim-Subscription-Key}}"
 									},
 									{
 										"key": "Ocp-Apim-Trace",
-										"value": "true",
-										"type": "text"
+										"value": "true"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-finance\",\n        \"parameters\": {\n            \"vehicle_type\": \"personbil\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-finance\",\n        \"parameters\": {\n            \"vehicle_type\": \"personbil\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
@@ -1771,35 +1804,30 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}",
-										"type": "text"
+										"value": "Bearer {{access_token}}"
 									},
 									{
 										"key": "Ocp-Apim-Subscription-Key",
-										"value": "{{Ocp-Apim-Subscription-Key}}",
-										"type": "text"
+										"value": "{{Ocp-Apim-Subscription-Key}}"
 									},
 									{
 										"key": "Ocp-Apim-Trace",
-										"value": "true",
-										"type": "text"
+										"value": "true"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-finance\",\n        \"parameters\": {            \n            \"vehicle_type\": \"personbil\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"organization\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-finance\",\n        \"parameters\": {            \n            \"vehicle_type\": \"personbil\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"organization\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
 							"response": []
 						}
 					],
-					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -1811,7 +1839,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "59cfcd49-7977-4f2c-a11f-7181911e715e",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 											"var jsonData = JSON.parse(responseBody);\r",
@@ -1844,28 +1871,24 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}",
-										"type": "text"
+										"value": "Bearer {{access_token}}"
 									},
 									{
 										"key": "Ocp-Apim-Subscription-Key",
-										"value": "{{Ocp-Apim-Subscription-Key}}",
-										"type": "text"
+										"value": "{{Ocp-Apim-Subscription-Key}}"
 									},
 									{
 										"key": "Ocp-Apim-Trace",
-										"value": "true",
-										"type": "text"
+										"value": "true"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport\",\n            \"vehicle_user\": \"person\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport\",\n            \"vehicle_user\": \"person\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
@@ -1878,28 +1901,24 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}",
-										"type": "text"
+										"value": "Bearer {{access_token}}"
 									},
 									{
 										"key": "Ocp-Apim-Subscription-Key",
-										"value": "{{Ocp-Apim-Subscription-Key}}",
-										"type": "text"
+										"value": "{{Ocp-Apim-Subscription-Key}}"
 									},
 									{
 										"key": "Ocp-Apim-Trace",
-										"value": "true",
-										"type": "text"
+										"value": "true"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport_erhverv\",\n            \"vehicle_user\": \"person\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport_erhverv\",\n            \"vehicle_user\": \"person\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
@@ -1912,28 +1931,24 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}",
-										"type": "text"
+										"value": "Bearer {{access_token}}"
 									},
 									{
 										"key": "Ocp-Apim-Subscription-Key",
-										"value": "{{Ocp-Apim-Subscription-Key}}",
-										"type": "text"
+										"value": "{{Ocp-Apim-Subscription-Key}}"
 									},
 									{
 										"key": "Ocp-Apim-Trace",
-										"value": "true",
-										"type": "text"
+										"value": "true"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport_halv_omsaetning\",\n            \"vehicle_user\": \"person\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport_halvomsaetning\",\n            \"vehicle_user\": \"person\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
@@ -1946,28 +1961,24 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}",
-										"type": "text"
+										"value": "Bearer {{access_token}}"
 									},
 									{
 										"key": "Ocp-Apim-Subscription-Key",
-										"value": "{{Ocp-Apim-Subscription-Key}}",
-										"type": "text"
+										"value": "{{Ocp-Apim-Subscription-Key}}"
 									},
 									{
 										"key": "Ocp-Apim-Trace",
-										"value": "true",
-										"type": "text"
+										"value": "true"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport\",\n            \"vehicle_user\": \"organization\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"125000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport\",\n            \"vehicle_user\": \"organization\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"125000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
@@ -1980,28 +1991,24 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}",
-										"type": "text"
+										"value": "Bearer {{access_token}}"
 									},
 									{
 										"key": "Ocp-Apim-Subscription-Key",
-										"value": "{{Ocp-Apim-Subscription-Key}}",
-										"type": "text"
+										"value": "{{Ocp-Apim-Subscription-Key}}"
 									},
 									{
 										"key": "Ocp-Apim-Trace",
-										"value": "true",
-										"type": "text"
+										"value": "true"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport_erhverv\",\n            \"vehicle_user\": \"organization\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"125000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport_erhverv\",\n            \"vehicle_user\": \"organization\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"125000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
@@ -2014,28 +2021,24 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}",
-										"type": "text"
+										"value": "Bearer {{access_token}}"
 									},
 									{
 										"key": "Ocp-Apim-Subscription-Key",
-										"value": "{{Ocp-Apim-Subscription-Key}}",
-										"type": "text"
+										"value": "{{Ocp-Apim-Subscription-Key}}"
 									},
 									{
 										"key": "Ocp-Apim-Trace",
-										"value": "true",
-										"type": "text"
+										"value": "true"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {            \n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport_halv_omsaetning\",\n            \"vehicle_user\": \"organization\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"125000\"        \n            },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {            \n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport_halv_omsaetning\",\n            \"vehicle_user\": \"organization\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"125000\"        \n            },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
@@ -2048,28 +2051,24 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}",
-										"type": "text"
+										"value": "Bearer {{access_token}}"
 									},
 									{
 										"key": "Ocp-Apim-Subscription-Key",
-										"value": "{{Ocp-Apim-Subscription-Key}}",
-										"type": "text"
+										"value": "{{Ocp-Apim-Subscription-Key}}"
 									},
 									{
 										"key": "Ocp-Apim-Trace",
-										"value": "true",
-										"type": "text"
+										"value": "true"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport_privat/erhverv\",\n            \"vehicle_user\": \"organization\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"125000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport_privat_erhverv\",\n            \"vehicle_user\": \"organization\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"125000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
@@ -2082,28 +2081,24 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}",
-										"type": "text"
+										"value": "Bearer {{access_token}}"
 									},
 									{
 										"key": "Ocp-Apim-Subscription-Key",
-										"value": "{{Ocp-Apim-Subscription-Key}}",
-										"type": "text"
+										"value": "{{Ocp-Apim-Subscription-Key}}"
 									},
 									{
 										"key": "Ocp-Apim-Trace",
-										"value": "true",
-										"type": "text"
+										"value": "true"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-finance\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport\",\n            \"vehicle_user\": \"person\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-finance\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport\",\n            \"vehicle_user\": \"person\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
@@ -2116,35 +2111,30 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{access_token}}",
-										"type": "text"
+										"value": "Bearer {{access_token}}"
 									},
 									{
 										"key": "Ocp-Apim-Subscription-Key",
-										"value": "{{Ocp-Apim-Subscription-Key}}",
-										"type": "text"
+										"value": "{{Ocp-Apim-Subscription-Key}}"
 									},
 									{
 										"key": "Ocp-Apim-Trace",
-										"value": "true",
-										"type": "text"
+										"value": "true"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-finance\",\n        \"parameters\": {            \n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport_erhverv\",\n            \"vehicle_user\": \"person\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+									"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-finance\",\n        \"parameters\": {            \n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport_erhverv\",\n            \"vehicle_user\": \"person\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 								},
 								"url": "{{api_url}}/insurance/car/quotes"
 							},
 							"response": []
 						}
 					],
-					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -2153,7 +2143,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "42e429a1-acdc-42ad-9034-817163339fb3",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 									"var jsonData = JSON.parse(responseBody);\r",
@@ -2185,7 +2174,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "e72ab239-ab4f-40db-b514-611ea94730e4",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 									""
@@ -2228,7 +2216,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "0e88f338-c61f-4291-b2be-d977edbef21b",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 									""
@@ -2271,7 +2258,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ded754ba-bd86-4cc6-9c94-877d9d67f3ca",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;",
 									"var jsonData = JSON.parse(responseBody);",
@@ -2286,28 +2272,24 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
+								"value": "application/json"
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer {{access_token}}",
-								"type": "text"
+								"value": "Bearer {{access_token}}"
 							},
 							{
 								"key": "Ocp-Apim-Subscription-Key",
-								"value": "{{Ocp-Apim-Subscription-Key}}",
-								"type": "text"
+								"value": "{{Ocp-Apim-Subscription-Key}}"
 							},
 							{
 								"key": "Ocp-Apim-Trace",
-								"value": "true",
-								"type": "text"
+								"value": "true"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {            \n            \"vehicle_type\": \"personbil\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"person\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"390000\",\n            \"youngest_user_birthdate\": \"1977-08-19\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\",\n                    \"cpr_number\": \"1604639561\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+							"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {            \n            \"vehicle_type\": \"personbil\",\n            \"vehicle_usage\": \"privat_person_koersel\",\n            \"vehicle_user\": \"person\",            \n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"person\",\n            \"payments_per_year\": \"1\",            \n            \"vehicle_price\": \"390000\",\n            \"youngest_user_birthdate\": \"1977-08-19\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\",\n                    \"cpr_number\": \"1604639561\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 						},
 						"url": "{{api_url}}/insurance/car/quotes"
 					},
@@ -2319,7 +2301,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "abd887f6-6e60-4a40-9d0f-02293177313e",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;",
 									"var jsonData = JSON.parse(responseBody);",
@@ -2334,28 +2315,24 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
+								"value": "application/json"
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer {{access_token}}",
-								"type": "text"
+								"value": "Bearer {{access_token}}"
 							},
 							{
 								"key": "Ocp-Apim-Subscription-Key",
-								"value": "{{Ocp-Apim-Subscription-Key}}",
-								"type": "text"
+								"value": "{{Ocp-Apim-Subscription-Key}}"
 							},
 							{
 								"key": "Ocp-Apim-Trace",
-								"value": "true",
-								"type": "text"
+								"value": "true"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport\",\n            \"vehicle_user\": \"person\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@vw.dk\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
+							"raw": "{\n    \"product\": {\n        \"product_name\": \"insurance-car-leasing\",\n        \"parameters\": {\n            \"vehicle_type\": \"varevogn\",\n            \"vehicle_usage\": \"godstransport\",\n            \"vehicle_user\": \"person\",\n            \"vehicle_owner\": \"organization\",\n            \"policy_holder\": \"organization\",\n            \"payments_per_year\": \"1\",\n            \"vehicle_price\": \"359000\"\n        },\n        \"features\": [\n            {\n                \"name\": \"premium\"\n            }\n        ]\n    },\n \"policy\": {\n        \"brand_id\": \"VWSFDK_VW\",\n        \"external_reference\": \"20200976201\",\n        \"expected_effective_at\": \"2020-12-31\",\n        \"insurable_object\": {\n            \"vehicle\": {\n                \"make\": \"VW\",\n                \"model\": \"Transporter\",\n                \"variant\": \"6.1\",\n                \"vin\": \"1MMBB41JXYN109186\",\n                \"registration_number\": \"AK47540\"\n            }\n        },\n        \"parties\": [\n            {\n                \"vehicle_user\": true,\n                \"policy_holder\": true,\n                \"organization\": {\n                    \"cvr_number\": \"81753512\",\n                    \"name\": \"Alm. Brand\"\n                },\n                \"person\": {\n    \t\t\t\t\"first_name\": \"Ove\",\n    \t\t\t\t\"last_name\": \"Brammer\"\n    \t\t\t},\n                \"phone\": \"96101717\",\n                \"email\": \"jb@az.com\",\n                \"address\": {\n                    \"protected\": false,\n                    \"street\": \"Midtermolen\",\n                    \"house_number\": \"7A\",\n                    \"floor\": \"2\",\n                    \"door\": \"2.1\",\n                    \"postal_code\": 2100,\n                    \"city\": \"København Ø\"\n                }\n            },\n            {\n                \"vehicle_owner\": true,\n                \"vehicle_user\": false,\n                \"policy_holder\": false,\n                \"organization\": {\n                    \"cvr_number\": \"40861246\",\n                    \"name\": \"VWSF_DK\"\n                }\n            }\n        ]\n    },\n    \"agent\": {\n        \"user_id\": \"jsl@example.com\",\n        \"organization\": {\n            \"name\": \"SEMLER RETAIL HOLBÆK A/S\",\n            \"cvr_number\": \"21742031\",\n            \"cvrp_number\": \"1005168532\"\n        }\n    }\n}"
 						},
 						"url": "{{api_url}}/insurance/car/quotes"
 					},
@@ -2367,7 +2344,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "934289ec-1b61-42e2-b40b-56e1371690f4",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 									""
@@ -2396,6 +2372,7 @@
 								"value": "true"
 							}
 						],
+						"body": {},
 						"url": "{{api_url}}/insurance/car/quotes/{{quote_id}}"
 					},
 					"response": []
@@ -2406,7 +2383,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "f4f519be-5b14-42f1-afd2-abbb4b5ec289",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
 									""
@@ -2443,9 +2419,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
