@@ -1,0 +1,79 @@
+{
+	"info": {
+		"name": "Alm Brand API",
+		"_postman_id": "bd151116-afd7-0a68-5632-2e8d5dfa4fd5",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get access token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"postman.setEnvironmentVariable(\"access_token\", jsonData.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"client_id\": \"{{client_id}}\",\r\n    \"client_secret\": \"{{client_secret}}\",\r\n    \"audience\": \"https://api.almbrand.dk/\",\r\n    \"grant_type\": \"client_credentials\"\r\n}\r\n"
+				},
+				"url": "{{auth_url}}/oauth/token"
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer agreements",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5db9a35d-bf95-4a46-98c9-ec60f9d75e1f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{ocp-apim-subscription-key}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "{{api_url}}/customer/agreements/"
+			},
+			"response": []
+		}
+	]
+}
