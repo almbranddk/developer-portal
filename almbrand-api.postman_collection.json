@@ -31,7 +31,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{ \r\n    \"client_id\": \"{{client_id}}\",\r\n    \"client_secret\": \"{{client_secret}}\",\r\n    \"audience\": \"https://api.almbrand.dk/\",\r\n    \"grant_type\": \"client_credentials\"\r\n}\r\n"
+					"raw": "{ \r\n    \"client_id\": \"{{client_id}}\",\r\n    \"client_secret\": \"{{client_secret}}\",\r\n    \"audience\": \"https://api.almbrand.dk/\",\r\n    \"grant_type\": \"client_credentials\",\r\n    \"customerNumber\": \"9608386350\"\r\n\r\n}\r\n"
 				},
 				"url": "{{auth_url}}/oauth/token"
 			},
@@ -43,10 +43,12 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "5db9a35d-bf95-4a46-98c9-ec60f9d75e1f",
+						"id": "63f43e54-2c30-48bd-9e8b-50306026bf1a",
 						"type": "text/javascript",
 						"exec": [
-							""
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"agreement_line_seq_no\", jsonData.agreements[0].agreement_line_seq_no);"
 						]
 					}
 				}
@@ -55,8 +57,8 @@
 				"method": "GET",
 				"header": [
 					{
-						"key": "Content-Type",
-						"value": "application/json"
+						"key": "Accept",
+						"value": "application/hal+json"
 					},
 					{
 						"key": "Authorization",
@@ -64,14 +66,120 @@
 					},
 					{
 						"key": "Ocp-Apim-Subscription-Key",
-						"value": "{{ocp-apim-subscription-key}}"
+						"value": "{{subscription-key}}"
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"url": "{{api_url}}/customer/agreements/"
+				"url": {
+					"raw": "{{api_url}}/customer/agreements?page=1&size=25&include_own=false",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"customer",
+						"agreements"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "size",
+							"value": "25",
+							"equals": true
+						},
+						{
+							"key": "include_own",
+							"value": "false",
+							"equals": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer agreement line",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f2e4af92-ebc1-43d0-bdb3-ce65995bfe75",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"agreement_line_seq_no\", jsonData.agreements[1].agreement_line_seq_no);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/hal+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{subscription-key}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "{{api_url}}/customer/agreements/{{agreement_line_seq_no}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer agreement as pdf",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f2e4af92-ebc1-43d0-bdb3-ce65995bfe75",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"agreement_line_seq_no\", jsonData.agreements[1].agreement_line_seq_no);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/pdf"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{subscription-key}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "{{api_url}}/customer/agreements/{{agreement_line_seq_no}}/pdf"
 			},
 			"response": []
 		}
