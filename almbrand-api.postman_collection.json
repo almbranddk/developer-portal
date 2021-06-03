@@ -3,185 +3,221 @@
 		"name": "Alm Brand API",
 		"_postman_id": "bd151116-afd7-0a68-5632-2e8d5dfa4fd5",
 		"description": "",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Get access token",
-			"event": [
+			"name": "customer",
+			"description": "",
+			"item": [
 				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
-							"var jsonData = JSON.parse(responseBody);\r",
-							"postman.setEnvironmentVariable(\"access_token\", jsonData.access_token);"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{ \r\n    \"client_id\": \"{{client_id}}\",\r\n    \"client_secret\": \"{{client_secret}}\",\r\n    \"audience\": \"https://api.almbrand.dk/\",\r\n    \"grant_type\": \"client_credentials\",\r\n    \"customerNumber\": \"9608386350\"\r\n\r\n}\r\n"
-				},
-				"url": "{{auth_url}}/oauth/token"
-			},
-			"response": []
-		},
-		{
-			"name": "Get customer agreements",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "63f43e54-2c30-48bd-9e8b-50306026bf1a",
-						"type": "text/javascript",
-						"exec": [
-							"tests[\"Status code is 200\"] = responseCode.code === 200;",
-							"var jsonData = JSON.parse(responseBody);",
-							"postman.setEnvironmentVariable(\"agreement_line_seq_no\", jsonData.agreements[0].agreement_line_seq_no);"
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/hal+json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
-						"key": "Ocp-Apim-Subscription-Key",
-						"value": "{{subscription-key}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{api_url}}/customer/agreements?page=1&size=25&include_own=false",
-					"host": [
-						"{{api_url}}"
-					],
-					"path": [
-						"customer",
-						"agreements"
-					],
-					"query": [
+					"name": "Get access token",
+					"event": [
 						{
-							"key": "page",
-							"value": "1",
-							"equals": true
-						},
-						{
-							"key": "size",
-							"value": "25",
-							"equals": true
-						},
-						{
-							"key": "include_own",
-							"value": "false",
-							"equals": true
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"access_token\", jsonData.access_token);"
+								],
+								"type": "text/javascript"
+							}
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get customer agreement line",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "f2e4af92-ebc1-43d0-bdb3-ce65995bfe75",
-						"type": "text/javascript",
-						"exec": [
-							"tests[\"Status code is 200\"] = responseCode.code === 200;",
-							"var jsonData = JSON.parse(responseBody);",
-							"postman.setEnvironmentVariable(\"agreement_line_seq_no\", jsonData.agreements[1].agreement_line_seq_no);"
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/hal+json"
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"client_id\": \"{{client_id}}\",\r\n    \"client_secret\": \"{{client_secret}}\",\r\n    \"audience\": \"https://api.almbrand.dk/\",\r\n    \"grant_type\": \"client_credentials\",\r\n    \"customerNumber\": \"9608386350\"\r\n\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{auth_url}}/oauth/token",
+							"host": [
+								"{{auth_url}}"
+							],
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
 					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
-						"key": "Ocp-Apim-Subscription-Key",
-						"value": "{{subscription-key}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
+					"response": []
 				},
-				"url": "{{api_url}}/customer/agreements/{{agreement_line_seq_no}}"
-			},
-			"response": []
-		},
-		{
-			"name": "Get customer agreement as pdf",
-			"event": [
 				{
-					"listen": "test",
-					"script": {
-						"id": "f2e4af92-ebc1-43d0-bdb3-ce65995bfe75",
-						"type": "text/javascript",
-						"exec": [
-							"tests[\"Status code is 200\"] = responseCode.code === 200;",
-							"var jsonData = JSON.parse(responseBody);",
-							"postman.setEnvironmentVariable(\"agreement_line_seq_no\", jsonData.agreements[1].agreement_line_seq_no);"
-						]
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/pdf"
+					"name": "Get agreements",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "63f43e54-2c30-48bd-9e8b-50306026bf1a",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"agreement_line_seq_no\", jsonData.agreements[0].agreement_line_seq_no);"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/hal+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{subscription-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api_url}}/customer/agreements?page=1&size=25&include_own=false",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"customer",
+								"agreements"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"equals": true
+								},
+								{
+									"key": "size",
+									"value": "25",
+									"equals": true
+								},
+								{
+									"key": "include_own",
+									"value": "false",
+									"equals": true
+								}
+							]
+						}
 					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{access_token}}"
-					},
-					{
-						"key": "Ocp-Apim-Subscription-Key",
-						"value": "{{subscription-key}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
+					"response": []
 				},
-				"url": "{{api_url}}/customer/agreements/{{agreement_line_seq_no}}/pdf"
-			},
-			"response": []
+				{
+					"name": "Get agreement line",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8a5e4d05-1c87-429e-a2f8-26c46ca604be",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/hal+json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{subscription-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api_url}}/customer/agreements/{{agreement_line_seq_no}}",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"customer",
+								"agreements",
+								"{{agreement_line_seq_no}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get agreement as pdf",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "af5b4025-537f-4a2e-a287-252e83b4f6b9",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/pdf"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							},
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "{{subscription-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{api_url}}/customer/agreements/{{agreement_line_seq_no}}/pdf",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"customer",
+								"agreements",
+								"{{agreement_line_seq_no}}",
+								"pdf"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
